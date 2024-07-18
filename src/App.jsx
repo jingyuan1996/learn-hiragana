@@ -49,7 +49,6 @@ function App() {
         <center>
           <h1>{worlddata.jp_word}</h1>
           <h2>{worlddata.pinyin}</h2>
-          <h2>{count}</h2>
           <Navgatorbutton />
         </center>
       </div>
