@@ -23,21 +23,46 @@ function App() {
       //console.log(">0");
       return (
         <>
-          <button onClick={minusClick}>back</button>
-          <button onClick={nextClick}>next</button>
+          <div>
+            <button className="btn-light btn ms-1" onClick={minusClick}>
+              back
+            </button>
+            <button className="btn-light btn ms-1" onClick={nextClick}>
+              next
+            </button>
+          </div>
         </>
       );
     } else if (count >= 45) {
       //console.log(">13");
       return (
         <>
-          <button onClick={minusClick}>back</button>
+          <div>
+            <button className="btn-light btn ms-1" onClick={minusClick}>
+              back
+            </button>
+            <button className="btn-light btn ms-1" onClick={nextClick} disabled>
+              next
+            </button>
+          </div>
         </>
       );
     } else {
       return (
         <>
-          <button onClick={nextClick}>next</button>
+          <div>
+            <button
+              className="btn-light btn ms-1"
+              onClick={minusClick}
+              disabled
+            >
+              back
+            </button>
+
+            <button className="btn-light btn ms-1" onClick={nextClick}>
+              next
+            </button>
+          </div>
         </>
       );
     }
@@ -45,12 +70,12 @@ function App() {
 
   return (
     <>
-      <div className="test">
-        <center>
+      <div className="card test position-absolute top-50 start-50 translate-middle text-center text-white bg-dark">
+        <div className="card-body">
           <h1>{worlddata.jp_word}</h1>
           <h2>{worlddata.pinyin}</h2>
           <Navgatorbutton />
-        </center>
+        </div>
       </div>
     </>
   );
